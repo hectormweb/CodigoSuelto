@@ -1,0 +1,6 @@
+{
+  "nombre": "Mi Proyecto",
+  "descripcion": "Este es un ejemplo de JSON",
+  "version": "1.0.0",
+  "autores": ["Autor 1", "Autor 2"]
+}
