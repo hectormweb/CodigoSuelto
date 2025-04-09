@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar JSON en HTML</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Datos de Personas</h1>
+    <div id="tabla-datos"></div>
+
+    <script>
+        // Datos en formato JSON
+        const datos = [
+            {"Nombre": "Juan", "Edad": 25, "Ciudad": "Madrid"},
+            {"Nombre": "Ana", "Edad": 30, "Ciudad": "Barcelona"}, // Nota: Hay un typo en "Ciudad" (debería ser "Ciudad")
+            {"Nombre": "Carlos", "Edad": 22, "Ciudad": "Valencia"}
+        ];
+
+        // Función para crear la tabla HTML
+        function crearTabla(datos) {
+            if (datos.length === 0) return "<p>No hay datos disponibles</p>";
+
+            // Extraer las cabeceras (keys del primer objeto)
+            const cabeceras = Object.keys(datos[0]);
+
+            // Crear la tabla HTML
+            let html = '<table><thead><tr>';
+
+            // Añadir las cabeceras
+            cabeceras.forEach(cabecera => {
+                html += `<th>${cabecera}</th>`;
+            });
+            html += '</tr></thead><tbody>';
+
+            // Añadir las filas de datos
+            datos.forEach(fila => {
+                html += '<tr>';
+                cabeceras.forEach(cabecera => {
+                    html += `<td>${fila[cabecera] ?? ''}</td>`; // Usamos ?? '' para manejar valores undefined/null
+                });
+                html += '</tr>';
+            });
+
+            html += '</tbody></table>';
+            return html;
+        }
+
+        // Insertar la tabla en el HTML
+        document.getElementById('tabla-datos').innerHTML = crearTabla(datos);
+    </script>
+</body>
+</html>
