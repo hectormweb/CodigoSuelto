@@ -1,0 +1,45 @@
+{
+  "paquetes": [
+    {
+      "id": 1,
+      "destino": "Cancún, México",
+      "precio": 1200,
+      "duracion": "7 días",
+      "incluye": ["Vuelo", "Hotel 4*", "Transporte", "Desayunos"],
+      "disponible": true
+    },
+    {
+      "id": 2,
+      "destino": "París, Francia",
+      "precio": 1850,
+      "duracion": "5 días",
+      "incluye": ["Vuelo", "Hotel 3*", "Tour ciudad", "Seguro"],
+      "disponible": true
+    },
+    {
+      "id": 3,
+      "destino": "Machu Picchu, Perú",
+      "precio": 950,
+      "duracion": "4 días",
+      "incluye": ["Tren", "Guía", "Entradas", "1 noche en Cusco"],
+      "disponible": false
+    },
+    {
+      "id": 4,
+      "destino": "Nueva York, USA",
+      "precio": 1500,
+      "duracion": "6 días",
+      "incluye": ["Vuelo", "Hotel centro", "Metrocard ilimitada"],
+      "disponible": true
+    },
+    {
+      "id": 5,
+      "destino": "Roma, Italia",
+      "precio": 1350,
+      "duracion": "5 días",
+      "incluye": ["Vuelo", "Hotel 3*", "Tour Coliseo", "Desayunos"],
+      "disponible": true
+    }
+  ],
+  "ultima_actualizacion": "2023-11-20"
+}
